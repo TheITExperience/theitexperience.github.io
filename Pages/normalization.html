@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>img[alt="www.000webhost.com"]{display:none;}</style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Normalization in Database Management">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Normalization, Database, Database Management, information, foreign keys, candidatekey, database, Normalization, functional dependency, third normal form, fourth normal form, BCNF, Boyce-Codd, multi-valued attribute">
+    <meta name="author" content="The Information Technology Experience">
+    <script type="text/javascript" src="../Assets/blog.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="article.css"> -->
+    <link rel="stylesheet" href="../Assets/universal.css">
+    <link rel="icon" type="image/x-icon" href="../Assets/icons8-pen-16 (1).png">
+    <title>Normalization in Database Management</title>
+
+        
+           
+        </head>
+        <body class="body">
+          
+          <!-- NAV BAR -->
+         <div class="w3-top">
+          <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="Articles.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ARTICLES</a>
+            <a href="AboutUs.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+            <a href="ContactUs.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+            <a href="NonDisclaimerPolicy.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PRIVACY POLICY</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+             
+            </div>
+            <!-- <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a> -->
+          </div>
+        </div>
+        
+        <!-- NAV BAR -->
+        <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+            <!-- <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a> -->
+            <a href="Articles.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ARTICLES</a>
+            <a href="AboutUs.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+            <a href="ContactUs.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+            <a href="NonDisclaimerPolicy.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PRIVACY POLICY</a>
+          </div>
+    
+    
+          <!-- <div class="wrapper"> -->   
+          <div class="about-section">
+          
+          
+            <article>
+                <br>
+               
+                <center> <small>Database Management</small> </center>
+   
+                <h1>Normalization in Database Management</h1>
+    
+            <article>
+                <blockquote><i>
+                    November 11, 2022<br>
+                    Read Time: 4 mins 34 secs <br>
+               Word Count: 1087
+               </i>
+                </blockquote>
+
+               <img src="../Assets/normalizationheader.png " alt="Page Header Image">
+
+               <h3>FUNCTIONAL DEPENDENCY</h3>
+               <p>In a database management system, functional dependency  is a constraint that establishes the relationship between one attribute and another attribute. Functional Dependency aids in preserving the integrity of the database's data.
+                Function dependency can also be defined as a relationship between keys and non-keys in a database. Keys are also called candidate keys or primary keys. These keys are used to determine other data stored in the database. What is meant by determining. Determining is essentially defining. For e.g. In a school system, all students have an ID number. This ID number is what is used to determine or define each student uniquely. And with that said, it is correct to assume that in a database, primary keys have to be unique to be primary keys. This key or piece of information cannot be duplicated or it will violate the primary key constraint. This value also cannot be null. Adding a primary key constraint to your key automatically adds a unique and a NOT NULL constraint to the key. Now you understand what a primary key is</p><br>
+           
+               <p>Where functional dependency comes in is where your name, age and all other details the school keeps about you is determined by your ID number. The ID number is the primary key and your name is the non-key attribute. If your name and all other details are functionally dependent on your ID number only your ID number should determine all your details. Therefore if you search up your ID in the school system it must always bring up the same details. No other ID number should determine your information.</p>
+           
+               <br>
+               <p>Here is an illustration</p>
+               <p>RELATION ( <u>A,</u> B, C, D, E)</p>
+               <p>FD: A -> B,C,D,E</p>
+               <p>B, C, D, E are functionally dependent on A</p>
+           
+               
+           
+               <br><br>
+
+               <h3>What is an ERD</h3>
+               <p>You will need this knowledge to understand some of the concepts explained about normalization. An Entity Relationship Diagram (ERD) is a kind of flowchart that depicts the connections between entities like people, things, or concepts inside a particular system. ER Diagrams are most frequently used in the disciplines of software engineering, database management systems, information systems, education, and research to build or troubleshoot relational databases. They are also known as ER Models, and they employ a predetermined collection of symbols to represent the inter-connectivity of entities, connections, and their qualities. These symbols include rectangles, diamonds, ovals, and connecting lines to display cardinalities. They have verbs for connections and nouns for entities, mirroring the grammatical framework.</p>
+
+               <br><br>
+                
+               <h3>FIRST NORMAL FORM (1NF)</h3>
+               <p>First normal form states that every attribute in a
+                   relation must “be atomic” aka “have a single
+                   value”. You cannot have two values being held by one attribute or key. This is called a  <font color="red">multi-valued attribute</font>. A double oval with the name of the attribute inside the oval is used to symbolize a multi-valued attribute on an ERD.</p>
+                   
+                   <br>
+                   <p>Here is an illustration</p>
+                   <p>Customer ( <u>customer_id</u>, First_name, Last_name,
+                       DOB, <font color="red">emails</font>)</p>
+           
+                       <br>
+                   <p>This relation is in 0NF, <i>emails</i> is incorrect. We fix this by removing the offending attribute and putting it in a table by itself along with its primary key from the previous table</p>
+           
+                   
+           
+                   <p>Customer (<u>customer_id</u>, First_name, Last_name,
+                       dob)<br>
+                    Customer_Email (<u>customer_id</u>, email)</p>
+           
+           
+                    <p>Doing this will put your relation in First Normal Form (1NF)</p>
+           
+           
+                     
+                    <br> <br> 
+               <h3>SECOND NORMAL FORM (2NF)</h3>
+           
+               <p>A relation is in second normal form if it is already in 1NF and all non-key attributes are functional dependent on the ENTIRE COMPOSITE key and nothing but the key. But, what is a composite key. A composite key is a key that is made up of two or more keys. This combination is usually a result of a many to many relationship between entities on the ERD. For those two entities to be connected a third table has to be created with both their primary keys which form, you guessed it, a composite key. Your table violates 2NF when it has a <font color="red">partial dependency</font>.
+               A partial dependency occurs when only some of the non-keys in a table are determined by the WHOLE primary key. If you have a composite key with 100 keys all attributes in that table must be determined by all 100 of the keys that make up the composite key.
+               <br><br>
+               <p>Here is an illustration</p>
+              
+               <p>Loan (<u>customer_id, loan_number</u>, DOB, amount)<br>
+                   FD: <u>customer_id, loan_number</u> -> amount<br>
+                   FD: Customer_id -> DOB</p>
+           
+               <p>In the example, DOB is only dependent on Customer_id. This is incorrect.</p>
+           
+               <br>
+               <p>We fix this by removing the offending attribute and putting it in a table by itself along with its primary key from the previous table</p>
+           
+               <p>Loan (<u>customer_id, loan_number</u>, amount)<br>
+               FD: <u>customer_id, loan_number</u> -> amount<br></p>
+               
+           
+           
+               <p>Customer (<u>customer_id</u>, DOB)<br>
+               FD: <u>Customer_id</u> -> DOB</p>
+           
+               <br>
+               <p>If your database does not contain a composite key it cannot violate 2NF.  </p>
+                   
+                  
+                   
+                   </p>
+           
+           
+                   
+            
+           
+             
+            <br>  <br> 
+            <h3>THIRD NORMAL FORM (2NF)</h3>
+            <p>A relation is in third normal form if it is in 1NF 
+               and 2NF and there is no non-key attribute that 
+               functionally determines another non-key 
+               attribute. Your table violates 3NF when it has a <font color="red">transitive dependency.</font></p>
+           
+               <br>
+               <p>Here is an illustration</p>
+              
+               <p>Loan (<u>customer_id</u>, loan_number ,DOB, amount)<br>
+                   <br>
+                   FD: customer_id -> DOB, amount </p>
+           
+                  <p> FD: amount -> loan_number  </p>
+           
+                  <p>Problem: loan_number  is functional 
+                   dependent on amount which is not the candidate key of the table</p>
+           
+                   <p>Solution: We fix this by removing the offending attributes and putting them in a table by themselves </p><br>
+           
+                   <p>Loan (<u>customer_id</u>, DOB)<br>
+                   <p>Loan (<u>amount</u>, loan_number)<br><br>
+           
+                       <p>Doing this will put your relation in Third Normal Form (3NF)</p>
+           
+           
+            
+            <br>  <br> 
+           
+            <h3>BOYCE CODD NORMAL FORM (BCNF)</h3>
+           <p>A relation is in BCNF if it is in third 
+               normal form, and only every 
+               determinant is a key. Boyce-Codd normal form can be considered a 
+               stronger version of third normal. Violations of Boyce-Codd Normal form occurs 
+               when there an overlap of determinants (usually 
+               with composite keys). 3NF does not handle a key attribute in a 
+               composite key is dependent on a non-key 
+               attribute. BCNF is special case, the determinant would
+               take the place of the dependent in the composite
+               key. The dependent would be placed in a new
+               relation with the determinant.
+                It makes sense for the determinant to take the
+               place of dependent, since you can find out what
+               the dependent is by using the determinant.</p><br>
+
+
+            <h3>FOURTH NORMAL FORM (4NF)</h3>
+            <p>A relation is in 4NF if it is in BCNF and contains
+                no nontrivial multi-valued dependencies
+                 What is Multi-valued dependency?
+                 A multi-valued dependency is a constraint
+                according to which the presence of certain rows
+                in a table implies the presence of certain other
+                rows in that same table. Thus, the 4NF would not be possible with a multi-valued dependency. For Example: Loan (customer_id, loan_number ,dob, <font color="red">Car1</font>). Car1 implies that there is a Car, Car2, etc.</p>
+                            
+
+         
+            </article> <!-- ending tag -->
+
+  
+            
+          </div>
+        </div>
+          
+    
+        </div>
+        <div class="w3-center vid-footer"> Copyright 2020 - 2022  DASB Productions. All rights reserved. 
+            <br> <span id='ct5' style="background-color: transparent;"></span>
+            <a style="text-decoration: none;" href="/"> Home</a> <a style="text-decoration: none;" href="Disclaimer.html"> | Disclaimer</a> <a style="text-decoration: none;" href="SiteMap.html"> | SiteMap</a> 
+             </div>
+        
+            
+        </body>
+        <style>
+
+
+
+            .card{
+            
+                width: 50%;
+            border-radius: 10px;
+            /* border: 5px solid; */
+          
+          
+            
+        }
+
+            .w3-button:hover{color:#000!important;background-color:gold!important}
+            .w3-padding-large{padding:16px 30px!important}
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+           
+            justify-content: center;
+            align-items: center;
+            /* background: #1B6CFB; */
+            background-color: #000;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+           
+        }
+        
+        .wrapper{
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            max-width: 70%;
+            width: 100%;
+            /* border-radius: 35px; */
+            padding: 25px;
+            /* box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); */
+            /* border: 5px solid;
+            border-color: gold; */
+            box-shadow: 10px 15px 15px;
+            margin-top: 10%;
+        }
+        
+        h2,h5{
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: bold;
+            
+        }
+
+        h4,h6,h3{
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: bold;
+            color:#1B6CFB;
+
+        }
+
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: bold;
+            
+
+        }
+        
+        
+        img{
+           
+            width: 100%;
+            margin: 10px;
+            /* border-radius: 10px;
+            box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.4); */
+            text-align: center;
+            max-width: auto; 
+            height: auto;
+            
+        }
+        
+        li, p{
+            margin: 20px;
+            line-height: 3;
+            /* font-family: Arial; */
+            /* font-weight: bold; */
+            font-size:14px;
+            font-family: Arial,Helvetica,sans-serif;
+            
+           
+
+        }
+
+        article{
+                /* margin: 20%; */
+                color: white;
+                line-height: 3;
+                margin-top: 10%;
+                margin-left: 5%;
+                margin-right: 5%;
+                font-weight:normal;
+                font: size 15.5em;
+                
+               
+            }
+
+        u{
+            /* font-size: larger;
+            text-transform: uppercase; */
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        h5{
+            font-size:22px; 
+        }
+
+        
+        
+       
+        
+            </style>
+<script>
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else { 
+            x.className = x.className.replace(" w3-show", "");
+        }
+}
+</script>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else { 
+                    x.className = x.className.replace(" w3-show", "");
+                }
+    }
+        </script>
+        <script>
+
+            function display_ct5() {
+            var x = new Date()
+            var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
+            
+            var x1=x.getMonth() + 1+ "/" + x.getDate() + "/" + x.getFullYear(); 
+            x1 = x1 + " - " +  x.getHours( )+ ":" +  x.getMinutes() + ":" +  x.getSeconds()  + ampm;
+            document.getElementById('ct5').innerHTML = x1;
+            display_c5();
+             }
+             function display_c5(){
+            var refresh=1000; // Refresh rate in milli seconds
+            mytime=setTimeout('display_ct5()',refresh)
+            }
+            display_c5()
+            </script>
+        </html>

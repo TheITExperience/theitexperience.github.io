@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>img[alt="www.000webhost.com"]{display:none;}</style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../Assets/blog.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   
+    <meta name="author" content="The Information Technology Experience">
+    <meta name="description" content="Relational Algebra">
+    <meta name="keywords" content="HTML, CSS, JavaScript, chrome, extension, web, web browsing, arrays, Programming, Object-Oriented, methods, overiding, overloading, filepointer,files, randomaccessfiles, sequentialaccessfile, programming, how to open file, files in programming, Relational Algebra">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="article.css"> -->
+    <link rel="stylesheet" href="../Assets/universal.css">
+    <link rel="icon" type="image/x-icon" href="../Assets/icons8-pen-16 (1).png">
+    <title>Relational Algebra</title>
+
+        
+           
+        </head>
+        <body class="body">
+          
+          <!-- NAV BAR -->
+         <div class="w3-top">
+          <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"  onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="Articles.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ARTICLES</a>
+            <a href="AboutUs.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+            <a href="ContactUs.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+            <a href="NonDisclaimerPolicy.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PRIVACY POLICY</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+             
+            </div>
+            <!-- <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a> -->
+          </div>
+        </div>
+        
+        <!-- NAV BAR -->
+        <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+            <!-- <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a> -->
+            <a href="Articles.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ARTICLES</a>
+            <a href="AboutUs.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+            <a href="ContactUs.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+            <a href="NonDisclaimerPolicy.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PRIVACY POLICY</a>
+          </div>
+    
+    
+          <!-- <div class="wrapper"> -->
+ 
+            <div class="about-section">
+
+                <br>
+                <div class="about-section">
+                    <div style="color: white; margin-top: 7%;margin-left: 11%;
+                    margin-right: 11%;">
+                         <center>   <small>Database Management</small></center>  
+                           
+                    
+                         <h1>Relational Algebra</h1> 
+                    </div>
+  
+               <article>
+
+                <div>
+                    <blockquote><i>
+                        December 17, 2022<br>
+                        Read Time: 4 mins 21 secs <br>
+                    Word Count: 1034
+                       </i>
+                        
+                    </blockquote><br>
+                </div>
+                
+                <p>Relational Algebra first created
+                    by Edgar F. Codd while at IBM, is a
+                    family of algebras with a well-founded
+                    semantics used for modelling the data
+                    stored in relational databases, and
+                    defining queries on it. The main application of relational
+                    algebra is providing a theoretical
+                    foundation for relational databases. SQL is based on this theoretical
+                    foundation. Relational Algebra is based on set
+                    theory. Recursively applying relational algebra to a relation yields intermediate outcomes that are also regarded as relations.</p><br>
+
+                    <p>Operations in Relational Algebra are</p>
+                    <ol>
+                        <li>Projection</li>
+                        <ul>
+                           <p>Project Operation (∏)</p> 
+                           <p>Projection Operator is a relational algebra unary operator that performs a projection operation. It projects column(s) that satisfy a given predicate. </p> 
+                           <p>Notation - ∏ A1, A2, An (r)</p>
+                           <p>Example - ∏ trn, order_amount (Order) </p>
+                           <p>SQL – Select trn, order_amount from Order.</p>
+                        </ul><br>
+
+                        <table border="1">
+                            <tr>
+                                <th>OrderID</th>
+                                <th>Order Amount</th>
+                                <th>TRN</th>
+                                <th>TypeId</th>
+                            </tr>
+                            <tr>
+                                <td>B133</td>
+                                <td>$1000 </td>
+                                <td> 100456 </td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>B234</td>
+                                <td>$2000 </td>
+                                <td>100234 </td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>B335</td>
+                                <td>$1000 </td>
+                                <td>100456</td>
+                                <td>2</td>
+                            </tr>
+                        </table>
+                       
+                        <li>Selection</li>
+                        <li>Cartesian Product</li>
+                        <li>Set Union</li>
+                        <li>Joins</li>
+                        <li>Rename operator</li>
+                    </ol>
+
+               </article>
+            
+                
+              </div>
+            </div>
+          
+          
+         
+          
+
+       
+        </div>
+        <div class="w3-center vid-footer"> Copyright 2020 - 2022  DASB Productions. All rights reserved. 
+            <br> <span id='ct5' style="background-color: transparent;"></span>
+            <a style="text-decoration: none;" href="/"> Home</a> <a style="text-decoration: none;" href="Disclaimer.html"> | Disclaimer</a> <a style="text-decoration: none;" href="SiteMap.html"> | SiteMap</a> 
+             </div>
+        
+            
+        </body>
+        <style>
+
+            .card{
+            
+                width: 50%;
+            border-radius: 10px;
+            /* border: 5px solid; */
+          
+          
+            
+        }
+
+            .w3-button:hover{color:#000!important;background-color:gold!important}
+            .w3-padding-large{padding:16px 30px!important}
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+           
+            justify-content: center;
+            align-items: center;
+            /* background: #1B6CFB; */
+            background-color: #000;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+           
+        }
+        
+        
+        
+        h1,h2,h3,h5,h6{
+            text-align: center;
+            text-transform: uppercase;
+            /* margin-bottom: 20px; */
+            font-style: italic;
+            font-weight: bold;
+            
+        }
+
+        h4{
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: bold;
+
+        }
+        
+        
+        img{
+           
+            width: 90%;
+            margin: 10px;
+            text-align: center;
+            max-width: auto; 
+            height: auto;
+            object-fit: contain;
+            border-radius: 15px;
+            
+        }
+        
+        p{
+            margin: 12px;
+            line-height: 3;
+            /* font-family: Arial; */
+            /* font-weight: bold; */
+            font-size:14px;
+            font-family: Arial,Helvetica,sans-serif;
+           
+
+        }
+
+        li{
+            margin: 12px;
+            line-height: 3;
+            /* font-family: Arial; */
+            /* font-weight: bold; */
+            font-size:14px;
+            font-family: Arial,Helvetica,sans-serif;  
+            text-transform: uppercase;
+            font-style: italic;
+            font-size: 22px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: bold;
+            color:#1B6CFB;
+        }
+
+        article{
+                /* margin: 20%; */
+                color: white;
+                line-height: 3;
+                margin-top: 5%;
+                margin-left: 9%;
+                margin-right: 9%;
+                font-weight:normal;
+                font: size 15.5em;
+                
+               
+            }
+
+        u{
+            font-size: larger;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        h5{
+            font-size:22px; 
+            color:#1B6CFB;
+            text-align: left;
+        }
+
+        table{
+            width: 40%;
+            padding: 6px;
+            text-align: center;
+            border-color: white;
+            border: 1px solid white;
+            border-collapse: collapse;
+            background-color: #96D4D4;
+        }
+
+        th,tr{
+            padding: 6px; 
+        }
+
+        
+        
+       
+        
+            </style>
+<script>
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else { 
+            x.className = x.className.replace(" w3-show", "");
+        }
+}
+</script>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else { 
+                    x.className = x.className.replace(" w3-show", "");
+                }
+    }
+        </script>
+        <script>
+
+            function display_ct5() {
+            var x = new Date()
+            var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
+            
+            var x1=x.getMonth() + 1+ "/" + x.getDate() + "/" + x.getFullYear(); 
+            x1 = x1 + " - " +  x.getHours( )+ ":" +  x.getMinutes() + ":" +  x.getSeconds()  + ampm;
+            document.getElementById('ct5').innerHTML = x1;
+            display_c5();
+             }
+             function display_c5(){
+            var refresh=1000; // Refresh rate in milli seconds
+            mytime=setTimeout('display_ct5()',refresh)
+            }
+            display_c5()
+            </script>
+           
+        </html>

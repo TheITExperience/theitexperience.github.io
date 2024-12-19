@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>img[alt="www.000webhost.com"]{display:none;}</style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../Assets/blog.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   
+    <meta name="author" content="The Information Technology Experience">
+    <meta name="description" content="Random Access Files in C Programming">
+    <meta name="keywords" content="HTML, CSS, JavaScript, chrome, extension, web, web browsing, arrays, Programming, Object-Oriented, methods, overiding, overloading, filepointer,files, randomaccessfiles, sequentialaccessfile, programming, how to open file, files in programming">
+    <!-- <link rel="stylesheet" href="article.css"> -->
+    <link rel="stylesheet" href="../Assets/universal.css">
+    <link rel="icon" type="image/x-icon" href="../Assets/icons8-pen-16 (1).png">
+    <title>Random Access Files in C Programming</title>
+
+        
+           
+        </head>
+        <body class="body">
+          
+          <!-- NAV BAR -->
+         <div class="w3-top">
+          <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"  onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="Articles.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ARTICLES</a>
+            <a href="AboutUs.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+            <a href="ContactUs.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+            <a href="NonDisclaimerPolicy.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PRIVACY POLICY</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+             
+            </div>
+            <!-- <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a> -->
+          </div>
+        </div>
+        
+        <!-- NAV BAR -->
+        <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+            <!-- <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a> -->
+            <a href="Articles.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ARTICLES</a>
+            <a href="AboutUs.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+            <a href="ContactUs.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+            <a href="NonDisclaimerPolicy.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PRIVACY POLICY</a>
+          </div>
+    
+    
+          <!-- <div class="wrapper"> -->
+ 
+            <div class="about-section">
+
+                <br>
+                <div class="about-section">
+                    <div style="color: white; margin-top: 7%;margin-left: 11%;
+                    margin-right: 11%;">
+                         <center>   <small>Programming</small></center>  
+                           
+                    
+                         <h1>Random Access Files in C Programming</h1> 
+                    </div>
+  
+               
+                <article>
+                  
+                   
+                    <blockquote><i>
+                        December 3, 2022<br>
+                        Read Time: 4 mins 49 secs <br>
+                           Word Count: 1145
+                    </i>
+                      
+                   </blockquote><br>
+
+                    <img src="../Assets/randomaccessheader.png" alt="Files Header Image"><br>
+            
+                    <p>A record is a collection of fields for a single entity. For example, a student's record may contain the student's id number, first name, last name, date of birth, and GPA.  Each student's record would
+                        all contain the same fields but the information
+                        may be different for each.
+            
+                        A field is a collection of bytes that has meaning,
+                        e.g. a student's age, or grade or last name. All of
+                        these are individual fields.
+            
+                        A byte is the smallest unit of information in the file,
+                        the entire file is seen as just a stream of bytes.
+                        
+                   <br>
+            
+            
+                    Two types of files in programming are Sequential Access Files & Random Access Files</p><br>
+            
+                    <u>Sequential access files</u>
+                    <p>Sequential access files are essentially plain
+                        text files in which data is read from the
+                        beginning of the file until the desired
+                        information is found. Writing takes places at
+                        the beginning or at the end of the file (append
+                        mode). The information in the file is analyzed in sequence. This method of accessing the file is by far the most used among programmers due to its simple nature. The lengths of the records might all be different or could all be the same. Each record concludes with a unique character or characters. The file can start empty and grow.</p><br>
+            
+            
+                    <u>Random access files</u>
+                    <p>Random access files are usually binary files
+                        which allow data to be read or written from/to
+                        anywhere in the file. The file size is usually
+                        per-calculated fixed to the maximum amount
+                        of records the file will ever hold. Without looking at or scanning any other information that the file is presently storing, a specified segment of information within the record can be reached by the file pointer by navigating directly to it. Like a huge array of bytes kept in the file system, a random access file acts similarly. The term file pointer refers to a specific type of cursor or index into the inferred array; input operations read bytes beginning at the file pointer and advance the file pointer past the bytes read. Output procedures are also available if the random access file is generated in read/write mode; these actions write bytes beginning at the file pointer and advance the file pointer past the bytes written. The inferred array is expanded by output operations that write past its present end. The getFilePointer function may be used to read the file pointer, and the seek method can be used to set it.</p><br>
+            
+            
+                    <h5>Working with random access files</h5>
+            
+                    <ul >
+                        <li>Create and initialize the file with blank records.
+                            The number of blank records should be the
+                            maximum number of records the file will ever
+                            hold. Remember the file wont grow or shrink</li>
+            
+                        <li>To write or update a record in the file, calculate
+                            where in the file the record is to be written the
+                            write the record to the file</li>
+            
+                        <li>To read a record from the file, calculate where in
+                            the file the record is located, then read that
+                            record from the file</li>
+            
+            
+                        <li>The fopen() function is also used to open a
+                            random access file. The same modes used with
+                            sequential access files apply, but a 'b' is added
+                            to specify binary mode</li>
+            
+                        <li>The fseek() function is used to position the file
+                            pointer to the required record position before a
+                            write or read takes place</li>
+            
+                        <li>The fwrite() function writes records to the file</li>
+            
+                        <li>The fread() function reads records from the file</li>
+                        <li>The fclose() function closes the file</li>
+                        
+                    </ul><br>
+            
+                    <h5>Positioning the file pointer to the required record</h5>
+            
+                    <ul>
+                        <li>Start with the logical record number (1 to max
+                            records)</li>
+                        <li>Minus one from the logical record number</li>
+                        <li>Multiply by the size of a single record (remember
+                            all the records in a file have the same size)</li>
+                        <li>Use the result in the fseek() function. The result
+                            represents the actual location in the file (the byte
+                            position) where the actual record is located</li>
+                        <li>Use fseek(fp, sizeof(e) * (e.IdNo - 1), SEEK_SET); </li>
+                        <li>Where fp is the file pointer, e is a structure variable
+                            containing the data to be stored, IdNo is the logical
+                            record number, and SEEK_SET means to starting
+                            seeking from the beginning of the file</li>
+                        
+                    </ul><br>
+                    
+            
+                    <h5>Opening a random access file</h5>
+            
+                    <ul>
+                        <li>Include the standard input/output library</li>
+                        <li>Declare a pointer of data type FILE
+                        </li>
+                        <li>Call the fopen() function with the name of the
+                            file and the mode it is to be opened in</li>
+                        <li>Format:
+                            #include <stdio.h><br>
+                            FILE *filepointer;<br>
+                            filepointer = fopen(filename, mode);
+                            </li>
+                        <li>NOTE: filename and mode are strings</li>
+                        <li>The fopen() function returns a FILE pointer</li>
+                        <li>If the requested file was opened successfully,
+                            the FILE pointer returned will contain a valid
+                            memory address</li>
+                        <li>If the open operation failed, the FILE pointer
+                            returned will contain NULL (0)</li>
+                        <li>It is good programming practice to test the
+                            FILE pointer returned to determine if the file
+                            open operation was successful</li>
+                       
+                    </ul><br>
+            
+                    <h5>Modes used to open files in binary mode</h5>
+                    <ul>
+                        <li>wb: Open a file for writing in binary mode. If the file already exists, erase its contents
+                            and start a new file. If the file doesn't exist, create and open a new file for writing</li>
+                        <li>ab: Open a file for appending in binary mode. If the file already exists. If the file
+                            doesn't exist, create and open a new file for writing</li>
+                        <li> rb: Open a file for reading in binary mode. The file must already exist.</li>
+            
+                        <li>w+b: Open a file for both reading and writing in binary mode. If the file already exists,
+                            overwrite it. </li>
+            
+                            <li>a+b: Open a file for both reading and writing in binary mode. </li>
+                            <li>r+b: Open a file for both reading and writing in binary mode.</li>
+                            
+                    </ul><br>
+            
+                    <h5>Storing data in a
+                        random access file</h5>
+                       
+                        <u>To store data in the file:</u>
+            
+                        <ul>
+                            <li>The file must already be opened for writing</li>
+                            <li>You must have a FILE pointer pointing to the file
+                                and this pointer must not contain NULL</li>
+                            <li>Call the fwrite() function with the location of the
+                                data to be stored, the number of bytes from that
+                                location that will be stored, the amount of records
+                                (usually 1), and the FILE pointer</li>
+                                <li>Format:
+                                    fwrite(location, number of bytes, amount, filepointer);
+                                    eg. fwrite(&e, sizeof(e), 1, fp); </li>
+                            
+                        </ul><br>
+            
+            
+                        <h5>Retrieving data from
+                            a random access file</h5>
+                           
+                            <u>To retrieve data from the file:</u>
+                
+                            <ul>
+                                <li>The file must already be opened for reading</li>
+                                <li>You must have a FILE pointer pointing to the file
+                                    and this pointer must not contain NULL</li>
+                                <li>Call the fread() function with the location where
+                                    the data to be retrieved will be placed, the
+                                    number of bytes to be retrieved, the amount of
+                                    records (usually 1), and the FILE pointer.
+                                    </li>
+                                <li>Format:
+                                    fread(location, number of bytes, amount, filepointer);
+                                    eg. fread(&e, sizeof(e), 1, fp); </li>
+                               
+                            </ul><br>
+            
+                            <h5>Closing a random access file</h5>
+            
+                            <ul>
+                                <li>You should close a file when you are finished working
+                                    with it – this frees/releases resources used</li><br>
+                                
+                               
+                            </ul>
+                               
+                                <u>To close a file:</u>
+                    
+                                <ul>
+                                    <li>The file must have already be opened</li>
+                                    <li>You must have a FILE pointer pointing to the file and
+                                        this pointer must not contain NULL</li>
+                                    <li>Call the fclose() function with the FILE pointer
+                                        </li>
+                                    <li> Format:
+                                        fclose(filepointer); </li>
+                                   
+                                </ul>
+            
+            
+            
+
+                </article> <!-- ending tag -->
+            
+                
+              </div>
+            </div>
+          
+          
+         
+          
+
+       
+        </div>
+        <div class="w3-center vid-footer"> Copyright 2020 - 2022  DASB Productions. All rights reserved. 
+            <br> <span id='ct5' style="background-color: transparent;"></span>
+            <a style="text-decoration: none;" href="/"> Home</a> <a style="text-decoration: none;" href="Disclaimer.html"> | Disclaimer</a> <a style="text-decoration: none;" href="SiteMap.html"> | SiteMap</a> 
+             </div>
+        
+            
+        </body>
+        <style>
+
+            .card{
+            
+                width: 50%;
+            border-radius: 10px;
+            /* border: 5px solid; */
+          
+          
+            
+        }
+
+            .w3-button:hover{color:#000!important;background-color:gold!important}
+            .w3-padding-large{padding:16px 30px!important}
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+           
+            justify-content: center;
+            align-items: center;
+            /* background: #1B6CFB; */
+            background-color: #000;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+           
+        }
+        
+        
+        
+        h1,h2,h3,h5,h6{
+            text-align: center;
+            text-transform: uppercase;
+            /* margin-bottom: 20px; */
+            font-style: italic;
+            font-weight: bold;
+            
+        }
+
+        h4{
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: bold;
+
+        }
+        
+        
+        img{
+           
+            width: 90%;
+            margin: 10px;
+            text-align: center;
+            max-width: auto; 
+            height: auto;
+            object-fit: contain;
+            border-radius: 15px;
+            
+        }
+        
+        li, p{
+            margin: 12px;
+            line-height: 3;
+            /* font-family: Arial; */
+            /* font-weight: bold; */
+            font-size:14px;
+            font-family: Arial,Helvetica,sans-serif;
+            
+           
+
+        }
+
+        article{
+                /* margin: 20%; */
+                color: white;
+                line-height: 3;
+                margin-top: 10%;
+                margin-left: 9%;
+                margin-right: 9%;
+                font-weight:normal;
+                font: size 15.5em;
+                
+               
+            }
+
+        u{
+            font-size: larger;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        h5{
+            font-size:22px; 
+            color:#1B6CFB;
+            text-align: left;
+        }
+
+        
+        
+       
+        
+            </style>
+<script>
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else { 
+            x.className = x.className.replace(" w3-show", "");
+        }
+}
+</script>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else { 
+                    x.className = x.className.replace(" w3-show", "");
+                }
+    }
+        </script>
+        <script>
+
+            function display_ct5() {
+            var x = new Date()
+            var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
+            
+            var x1=x.getMonth() + 1+ "/" + x.getDate() + "/" + x.getFullYear(); 
+            x1 = x1 + " - " +  x.getHours( )+ ":" +  x.getMinutes() + ":" +  x.getSeconds()  + ampm;
+            document.getElementById('ct5').innerHTML = x1;
+            display_c5();
+             }
+             function display_c5(){
+            var refresh=1000; // Refresh rate in milli seconds
+            mytime=setTimeout('display_ct5()',refresh)
+            }
+            display_c5()
+            </script>
+           
+        </html>

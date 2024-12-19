@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>img[alt="www.000webhost.com"]{display:none;}</style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../Assets/blog.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="article.css"> -->
+    <meta name="author" content="The Information Technology Experience">
+    <meta name="description" content="Exception Handling in Programming">
+    <meta name="keywords" content="HTML, CSS, JavaScript, chrome, extension, web, web browsing, arrays, Programming, Object-Oriented, methods, overiding, overloading, filepointer,files, randomaccessfiles, exception, exceptionhandling, Object-Oriented, try block, catch block, Java, c++">
+    <link rel="stylesheet" href="../Assets/universal.css">
+    <link rel="icon" type="image/x-icon" href="../Assets/icons8-pen-16 (1).png">
+    <title>Exception Handling</title>
+
+    
+
+
+        
+           
+        </head>
+        <body class="body">
+          
+          <!-- NAV BAR -->
+         <div class="w3-top">
+          <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" = onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="Articles.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ARTICLES</a>
+            <a href="AboutUs.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+            <a href="ContactUs.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+            <a href="NonDisclaimerPolicy.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PRIVACY POLICY</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+             
+            </div>
+            <!-- <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a> -->
+          </div>
+        </div>
+        
+        <!-- NAV BAR -->
+        <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+            <!-- <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a> -->
+            <a href="Articles.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ARTICLES</a>
+            <a href="AboutUs.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+            <a href="ContactUs.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+            <a href="NonDisclaimerPolicy.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PRIVACY POLICY</a>
+          </div>
+    
+    
+          <!-- <div class="wrapper"> -->
+ 
+           
+          <div class="about-section">
+          
+          
+            <article>
+               
+                <center> <small style="line-height: 1;">Object-Oriented Programming</small> </center>
+             
+                 
+               
+
+                <h1>Exception Handling</h1>
+                <blockquote><i>
+                    December 11, 2022<br>
+                    Read Time: 5 mins 10 secs <br>
+                    Word Count: 1215
+                    
+                </i>
+                    
+               </blockquote><br>
+
+               <img src="../Assets/exceptionhandlingheader.png">
+            <br><br>
+            <h4>What is Exception Handling</h4>
+            <p>Exception handling involves dealing with errors that occur
+                while the program is executing. An exception is a signal generated when an abnormal event has occurred in a running program. It is used to manage situations which are outside the normal flow of program execution. Separates error-handling code from normal
+                processing code. Exceptions alter the flow of execution in a program from normal processing to executing an exception. Exception handling allows errors to be trapped and an
+                appropriate message displayed to the user informing
+                that an error has occurred. Exception Handling uses exceptions to indicate or signal that an error
+                has occurred. Exceptions are separate from the return values of methods. Exceptions can be logged so that the developer can use the log to debug the program at a later date. When an error occurs, an exception is produced. This is called raising or throwing the exception. The block of code where exceptions can be thrown is called the try block. The block of code to handle the exceptions generated is known as the catch handler (or catch block). The point in the code where the exception is generated is known as the throw point
+                 </p><br>
+
+                 <h4>The Benefits of Exception Handling</h4><br>
+                 <ul>
+                    <li>Separates error handling code from regular code by handling the exception in a catch handler</li>
+                    <li>If possible, allows program to run normally after
+                        exception has occurred</li>
+                    <li>If this is not possible, allows a graceful shutdown of
+                        the program instead of an abrupt termination</li>
+                    <li>Sufficiently handle unexpected occurrences and errors the programmer might not anticipate</li>
+                    <li>Improves the robustness of the program</li>
+                    <li>Improves the reliability of the programme</li>
+                    <li>provides defensive programming capabilities</li>
+                 </ul><br>
+
+                 <h4>Exception Handling Models</h4><br>
+
+                 
+                    <p style=" text-transform: uppercase;">Resumption model</p>
+
+                 <p>In the resumption model of exception handling,
+                    statement execution resumes with the line
+                    following the one that raised the exception. This model is used in languages such as BASIC</p><br>
+
+
+                    <p style=" text-transform: uppercase;">Termination model</p>
+
+                    <p>In the termination model of exception handling, the
+                        block of code containing the line that raised the
+                        exception is immediately terminated and control is
+                        passed to the exception handler in the method if
+                        one is present, otherwise the method immediately
+                        terminates. This model is used in C++ and Java programming languages</p><br>
+
+
+                    
+                 <h4>Checked vs Unchecked Exceptions</h4><br>   
+
+                 <p style=" text-transform: uppercase;">Unchecked Exceptions</p>
+                 <p>These are exceptions that a program is not required
+                    to handle. The program will compile successfully even
+                    if no exception handler is present. All exceptions in C++ are unchecked, but only exceptions that inherit from RuntimeException in Java
+                    are unchecked.</p><br>
+                    
+
+                    <p style=" text-transform: uppercase;">Checked Exceptions</p>
+                    <p>These are exceptions that a program must handle.
+                        The program will not compile if no exception handler
+                        is present or if the exception is not declared (so it can
+                        be propagated forward).●All exceptions that inherit from class Exception in Java are checked exceptions (apart from those that inherit
+                        from class RuntimeException). All checked exceptions
+                        in Java must be handled or declared. </p><br>
+
+
+                <h4>Unhandled Exceptions</h4><br>   
+                <p>If	an	unchecked	exception	is	raised	or	thrown	but	
+                    there	is	no	catch	handler	for	that exception. The	exception	is	propagated	upward	until	an	
+                    appropriate	catch	handler	is	found	or	the	program	
+                    terminates. This	process	is	called	stack	unwinding. However,	if	an	appropriate	catch	handler	is	found	
+                    then	the	exception	is	considered	handled	and	stack	
+                    unwinding	stops. Example: If main() called A() and A() called B() and an
+                    unhandled exception is thrown in B(),
+                    B() will terminate and return to A(),
+                    If the exception is not handled in A(), A() will
+                    terminate and return to main()
+                    If the exception is still not handled in main(), main()
+                    too will terminate and the entire program will
+                    terminate abnormally </p><br>
+
+
+                    <h4>Exception Hierarchy</h4><br> 
+                    <p>Both C++ and Java have exception hierarchies in which
+                        various exception classes are sub classes of some base
+                        exception or error class.
+                        Objects of the child class exceptions are also
+                        considered exceptions of their respective parent
+                        classes.
+                        For instance, you could code a catch handler to catch
+                        exception objects in C++ or Exception objects in Java,
+                        and this would catch all exceptions of the type of the
+                        parent as well as those of type of the child classes</p>  <br>
+
+
+                    <h4>Explicitly	Throwing	Exceptions</h4><br> 
+                    <p>In	C++,	exceptions	have	to	be	explicitly	thrown	by	the	
+                        programmer	in	code.
+                        Java	allows	the	programmer	to	explicitly	throw	
+                        exceptions,	but	it	can	also	automatically	throw	some	
+                        exceptions,	for	example,	a	division	by	zero	at	runtime	
+                        causes	Java	to	automatically	throw	an	
+                        ArithmeticException. In	Java	only	exception	objects	can	be	thrown,	while	in	
+                        C++	any	data	type,	value	or	object	can	be	thrown
+                        In	both	languages,	the	keyword	to	throw	an	exception	
+                        is	throw. </p><br>
+
+
+                    <h4>Re-throwing Exceptions</h4><br> 
+                    <p>Once an exception is processed by a catch block it is
+                        considered as being handled.
+                        What if the method containing the catch handler
+                        wants to propagate the exception up through the call
+                        stack? Re-throwing an exception allows a method to send a
+                        just-handled exception up to a calling method to
+                        indicate that the exception occurred.
+                        For example, if main() calls A() and A() calls B(), and
+                        B() handles an exception, it can rethrow that exception
+                        so it A() too can handle it, and A() in turn can rethrow
+                        it to main() for processing there. Re-throwing an exception is done inside the catch
+                        block / catch handler<br>
+                        Keyword format for C++:
+                        throw;
+                        (note that in C++ the throw statement is by itself to
+                        indicate a re-thrown exception).<br>
+                        Keyword format Java:
+                        throw ex;
+                        (where ex is the exception object caught)</p><br>
+
+
+                        <h4>Exception Specifiers/Declaration</h4><br> 
+                        <p>State that a method can throw a specific exception or
+                            set of exceptions
+                            Exceptions that can be thrown are specified after the
+                            argument list but before the method body using the
+                            keywords throw in C++ or throws in Java
+                            C++:
+                            
+                            void method( ) throw (int, string) { }. Java:
+
+                            void method( ) throws SQLException,
+                            
+                            IOException { }
+                            C++ and Java differ on how exception specifiers are
+                            treated by the language compilers
+                            Become part of the signature of the method in C++
+                            but not in Java</p><br>
+
+                        <h4>Java's Finally Block</h4><br>
+
+                        <p>Because both C++ and Java use the termination model
+                            of exception handling it is possible that some code will
+                            not get executed when an exception is thrown
+                            For instance, a file or database may have been
+                            opened or memory allocated, then the exception
+                            occurs and is handled before the code to close the
+                            file/database or release the memory was executed. This causes resource leaks
+
+                            Java tries to correct this by providing a finally block
+                            which always gets executed whether or not an
+                            exception is thrown. (except when System.exit() is
+                            used).
+                            C++ does not have a corresponding finally block. <br><br>
+                            Note:
+                            In C++ every try block must be
+                            followed by at least one catch
+                            block.
+                            
+                            In Java the catch block is
+                            optional if there is a finally
+                            block.
+                            
+                            Also in Java, the finally block is
+                            optional if there is a catch block
+                            however there must be one or
+                            the other or else the Java
+                            compiler will generate an error.
+
+                            The finally block is helpful for more than simply managing exceptions; it enables the programmer to prevent having to write cleanup code from unintentionally being skipped by a return, continue, or break commands. Even when no exceptions are predicted, it is always a good idea to place cleaning code in a finally.
+                        </p><br>
+
+                        <h4>Problems with Exception Handling</h4><br>
+
+                        <ul>
+                            <li>Exception handling can lead to surprisingly irregular
+                                execution of code</li>
+                            <li>Exception handling can hide underlying errors by
+                                trapping the exceptions thrown but not sufficiency
+                                distilling or handling the error that caused the
+                                exception</li>
+                            <li>Exception handling can cause resource leaks a
+                                resource is acquired and used by a method but an
+                                exception occurs before the resource is released</li>
+                            <li>The code might become cluttered and might be confusing for the programmer after a considerable amount of the fixing code is implemented</li>
+                        </ul>
+
+                            
+
+
+                        
+
+                            
+
+                    
+                        
+                
+                
+
+            
+               
+         
+            </article> <!-- ending tag -->
+
+        
+        
+             
+        
+        
+                  
+            
+            
+          </div>
+        </div>
+          
+          
+         
+          
+
+       
+        </div>
+        <div class="w3-center vid-footer"> Copyright 2020 - 2022  DASB Productions. All rights reserved. 
+            <br> <span id='ct5' style="background-color: transparent;"></span>
+            <a style="text-decoration: none;" href="/">| Home</a> <a style="text-decoration: none;" href="Disclaimer.html"> | Disclaimer</a> <a style="text-decoration: none;" href="SiteMap.html"> | SiteMap</a> 
+             </div>
+        
+            
+        </body>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else { 
+                    x.className = x.className.replace(" w3-show", "");
+                }
+    }
+        </script>
+        <script>
+
+            function display_ct5() {
+            var x = new Date()
+            var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
+            
+            var x1=x.getMonth() + 1+ "/" + x.getDate() + "/" + x.getFullYear(); 
+            x1 = x1 + " - " +  x.getHours( )+ ":" +  x.getMinutes() + ":" +  x.getSeconds()  + ampm;
+            document.getElementById('ct5').innerHTML = x1;
+            display_c5();
+             }
+             function display_c5(){
+            var refresh=1000; // Refresh rate in milli seconds
+            mytime=setTimeout('display_ct5()',refresh)
+            }
+            display_c5()
+            </script>
+              <style>
+
+
+
+                .card{
+                
+                    width: 50%;
+                border-radius: 10px;
+                /* border: 5px solid; */
+              
+              
+                
+            }
+    
+                .w3-button:hover{color:#000!important;background-color:gold!important}
+                .w3-padding-large{padding:16px 30px!important}
+    
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+               
+                justify-content: center;
+                align-items: center;
+                /* background: #1B6CFB; */
+                background-color: #000;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+               
+            }
+            
+            .wrapper{
+                margin: auto;
+                justify-content: center;
+                align-items: center;
+                background: white;
+                max-width: 70%;
+                width: 100%;
+                /* border-radius: 35px; */
+                padding: 25px;
+                /* box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); */
+                /* border: 5px solid;
+                border-color: gold; */
+                box-shadow: 10px 15px 15px;
+                margin-top: 10%;
+            }
+            
+            h2,h3,h5{
+                text-align: center;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                font-style: italic;
+                font-weight: bold;
+                
+            }
+    
+            h4,h6{
+                font-size: 20px;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                font-style: italic;
+                font-weight: bold;
+                color:#1B6CFB;
+    
+            }
+    
+            h1{
+                text-align: center;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                font-style: italic;
+                font-weight: bold;
+                
+    
+            }
+            
+            
+            img{
+               
+                width: 100%;
+                margin: 10px;
+                /* border-radius: 10px;
+                box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.4); */
+                text-align: center;
+                max-width: auto; 
+                height: auto;
+                
+            }
+            
+            li, p{
+                margin: 12px;
+                line-height: 3;
+                /* font-family: Arial; */
+                /* font-weight: bold; */
+                font-size:14px;
+                font-family: Arial,Helvetica,sans-serif;
+                
+               
+    
+            }
+    
+            article{
+                /* margin: 20%; */
+                color: white;
+                line-height: 3;
+                margin-top: 10%;
+                margin-left: 11%;
+                margin-right: 11%;
+                font-weight:normal;
+                font: size 15.5em;
+                
+               
+            }
+    
+            u{
+                font-size: larger;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                font-style: italic;
+                font-weight: bold;
+            }
+    
+            h5{
+                font-size:22px; 
+            }
+    
+            
+            
+           
+            
+                </style>
+        </html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>img[alt="www.000webhost.com"]{display:none;}</style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../Assets/blog.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="description" content="Arrays in C Programming">
+    <meta name="keywords" content="HTML, CSS, JavaScript, chrome, extension, web, web browsing, arrays, Programming">
+    <meta name="author" content="The Information Technology Experience">
+  
+    <!-- <link rel="stylesheet" href="article.css"> -->
+    <link rel="stylesheet" href="../Assets/universal.css">
+    <link rel="icon" type="image/x-icon" href="../Assets/icons8-pen-16 (1).png">
+    <title>Arrays in C Programming</title>
+           
+        </head>
+        <body class="body">
+          
+          <!-- NAV BAR -->
+         <div class="w3-top">
+          <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"  onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="Articles.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ARTICLES</a>
+            <a href="AboutUs.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+            <a href="ContactUs.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+            <a href="NonDisclaimerPolicy.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PRIVACY POLICY</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+             
+            </div>
+            <!-- <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a> -->
+          </div>
+        </div>
+        
+        <!-- NAV BAR -->
+        <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+            <!-- <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a> -->
+            <a href="Articles.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ARTICLES</a>
+            <a href="AboutUs.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+            <a href="ContactUs.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+          </div>
+    
+    
+          <!-- <div class="wrapper"> -->
+ 
+            <div class="about-section">
+              <div style="color: white; margin-top: 15%;">
+                <center> <small>Programming</small> </center>
+                     
+                   
+    
+                    <h1>Arrays in C Programming</h1>
+              </div>
+
+             
+                <article>
+                    <div class="reading-time">
+
+                    </div>
+               
+                   
+                    <blockquote><i>
+                        December 4, 2022<br>
+                        Read Time: 4 mins 21 secs <br>
+                    Word Count: 1034
+                       </i>
+                        
+                    </blockquote><br>
+                    <center>
+                       <img style=" width: 75%;" align="middle" src="../Assets/arrays header.png"> 
+                    </center><br>
+    
+                    
+                    <h5 style="text-align: left;">What are Arrays</h5>
+    
+                    <p style="line-height: 3;">An array is defined as a homogeneous, contiguous block of memory. An array is a collection of variables with the same data type and name. It is a data structure consisting of related data items. Array elements are stored in sequential memory and contiguous locations. Arrays are "static" entities in that they remain the same size throughout program execution. Any one of these elements may be referred to by giving the array’s name followed by the position number of the particular element in square brackets ([]). 
+    
+    
+                    Arrays can be classified as: <br>Single-Dimensional Array (1 row only) <br> Multi-Dimensional Array (rows and columns).
+                    </p><br><br>
+    
+                    <h5 style="text-align: left;">The Purpose of Arrays</h5>
+                    <p style="line-height: 3;">
+                        Primitive variables store one value at a time, whereas arrays may store multiple values or data items at a time. Arrays are commonly used in computer programs to organize data so that a related set of values can be easily sorted or searched. E.g., a search engine may use an array to store Web pages found in a search performed by the user. When displaying the results, the program will output one element of the array at a time.
+    
+    
+    
+                    </p><br>
+    
+    
+                    <!-- <h5 style="text-align: left;">1 Dimensional Arrays</h5>
+    
+               
+                    <u>State The Following</u>
+                    <ol>
+                        <li>The data type of the elements</li>
+                        <li>Name of the array</li>
+                        <li>The number of elements in the array.</li>
+                    </ol><br>
+    
+    
+                    <u>Syntax</u>
+                    <p>[datatype] [arrayName] [arraySize];</p>
+                    <p>[int] [cars] [5];</p>
+                    <small>Declares an array to store 5 integer
+                        elements.</small><br><br> -->
+                    
+    
+                        <h5 style="text-align: left;">Initializing Arrays</h5>
+    
+                        <p style="line-height: 3;">
+                            The first element in every array is the zeroth element. An array name, like other identifiers, can contain only letters, digits, and underscores and cannot begin with a digit. The elements of an array can be initialized when the array is defined by following the definition with an equal sign and braces containing a comma-separated list of initializers. ({1, 2, 3, 4}) If there are fewer initializers than the size of the array, the remaining elements are initialized to zero. If the array size is omitted from a definition with an initializer list, the number of elements in the array will be the number of elements in the initializer list. The #define preprocessor directive can be used to define a symbolic constant. When the program is preprocessed, all occurrences of the symbolic constant are replaced with the replacement text. e.g., #define SIZE 10
+    
+                        </p>
+                    
+                       
+                       
+                   <br>
+    
+    <u>Syntax</u>
+                    <p>int n[8] = {5, 2, 3, 10, 9};</p>
+                    <p>[5] [2] [3] [10] [9] [0] [0] [0]</p>
+                    <small>Declares the first 5 and places 0 in the remaining</small><br><br>
+    
+                       
+                   <br><br>
+    
+                    <h5 style="text-align: left;">Accessing an array</h5>
+    
+                   
+                    <p style="line-height: 3;">
+                        An element is accessed by indexing (numbering) the array name. This is done by placing the index of the element within square brackets after the name of the array. The array index starts at 0, so the index ranges from 0 to arraySize - 1 The most efficient way to access all the elements in an array is to use a loop to move through each index of the array. It is very common to see arrays and for loops used together. This is probably because for loops are used to do a specific number of loops, and arrays are always of a specific length. This makes for loops ideal for stepping through the elements of an array. C has no array bounds checking to prevent a program from referring to an element that does not exist Thus, an executing program can "walk off" the end of an array without warning. You should ensure that all array references remain within the bounds of the array. The most efficient way to access all the elements in an array is to use a loop to move through each index of the array. It is very common to see arrays and for loops used together. This is probably because for loops are used to do a specific number of loops, and arrays are always of a specific length. This makes for loops ideal for stepping through the elements of an array.
+    
+    
+                    </p><br>
+    
+                    <h5 style="text-align: left;">Arrays and Functions</h5>
+    
+                    <p style="line-height: 3;">
+                        To pass an array argument to a function, specify the array’s name without the square brackets. Unlike char arrays that contain strings, other array types do not have a special terminator. For this reason, the size of an array is passed to a function so that the function can process the proper number of elements. Although entire arrays are passed by reference, individual array elements are passed by value, exactly as simple variables are. Such simple single pieces of data (such as individual ints, floats, and chars) are called scalars. To pass an element of an array to a function, use the subscripted name of the array element as an argument in the function call.
+    
+                    </p><br>
+    
+                    <h5 style="text-align: left;">Multi Dimensional Array</h5>
+    
+                    <p style="line-height: 3;">An array containing more than one level or dimension is referred to as multi-dimensional. For instance, a 2D array, often known as a two-dimensional array, is a matrix of rows and columns . An array of arrays of arrays is therefore created.
+                        The simplest form of a multidimensional array is a two-dimensional array. The first index of the array represents rows of the table, and the second index represents columns of the table.
+    
+                        <br>
+    
+                   
+                   [datatype] [arrayName] [rows] [columns];<br>
+                    [int] [cars] [2] [3];<br>
+                    Calculate the size of a multidimensional array by multiplying the sizes of all the dimensions. The array's size can be calculated as the number of rows multiplied by (x) the number of columns.
+The size of the array above is 2 * 3, which is equal to 12 elements in the array.
+    
+    
+                    
+                    </p><br>
+    
+                    <h5 style="text-align: left;">Initializing Multi Dimensional Array</h5>
+    
+                    <p>
+                       [int] [cars] [2] [3] = {1,2,3,4,5};<br>
+                       If the braces around each sub-list are removed from the array’s initializer list, the compiler initializes the elements of the first row followed by the elements of the second row. The definition above provides five initializers. The initializers are assigned to the first row, then the second row. Any elements that do not have an explicit initializer are initialized to zero automatically, so b[1] [2] is initialized to 0.
+     
+                    </p><br>
+    
+                    <h5 style="text-align: left;">Accessing Multi Dimensional Array</h5>
+    
+                    <p>
+                        To manipulate a multi-dimensional array, a nested for loop is needed. A loop is a set of instructions that are repeatedly carried out until a specific condition is met. Typically, a certain action is taken, such as receiving and modifying a piece of data, and then a condition is verified, such as determining whether a counter has reached a predetermined value. A loop inside the body of the outer loop is known as a nested loop. Any sort of loop, like a while loop or a for loop, can be used as the inner or outer loop.<br>
+    
+     
+    
+                    </p>
+    
+    
+    
+                    
+    
+    
+    
+                   
+                        
+                           
+    
+    
+    
+    
+                 
+                 
+                 
+            
+             
+                </article> <!-- ending tag -->
+     
+                   
+                           
+
+            </div>  <!-- ABOUT CLOSING -->
+          <!-- </div>WRAPPER CLOSING -->
+          
+         
+          
+
+       
+        </div>
+        <div class="w3-center vid-footer"> Copyright 2020 - 2022  DASB Productions. All rights reserved. 
+            <br> <span id='ct5' style="background-color: transparent;"></span>
+            <a style="text-decoration: none;" href="/"> Home</a> <a style="text-decoration: none;" href="Disclaimer.html"> | Disclaimer</a> <a style="text-decoration: none;" href="SiteMap.html"> | SiteMap</a> 
+             </div>
+        
+            
+        </body>
+        
+        <script>
+            function myFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else { 
+                    x.className = x.className.replace(" w3-show", "");
+                }
+    }
+        </script>
+        <script>
+
+            function display_ct5() {
+            var x = new Date()
+            var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
+            
+            var x1=x.getMonth() + 1+ "/" + x.getDate() + "/" + x.getFullYear(); 
+            x1 = x1 + " - " +  x.getHours( )+ ":" +  x.getMinutes() + ":" +  x.getSeconds()  + ampm;
+            document.getElementById('ct5').innerHTML = x1;
+            display_c5();
+             }
+             function display_c5(){
+            var refresh=1000; // Refresh rate in milli seconds
+            mytime=setTimeout('display_ct5()',refresh)
+            }
+            display_c5()
+            </script>
+              <style>
+
+                .w3-button:hover{color:#000!important;background-color:gold!important}
+                .w3-padding-large{padding:16px 30px!important}
+    
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+               
+                justify-content: center;
+                align-items: center;
+                /* background: #1B6CFB; */
+                background-color: #000;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+               
+            }
+            
+            .wrapper{
+                margin: auto;
+                justify-content: center;
+                align-items: center;
+                background: white;
+                max-width: 70%;
+                width: 100%;
+                /* border-radius: 35px; */
+                padding: 25px;
+                /* box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); */
+                /* border: 5px solid;
+                border-color: gold; */
+                box-shadow: 10px 15px 15px;
+                margin-top: 10%;
+            }
+            
+            h1,h2,h3,h4,h5,h6{
+                text-align: center;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                font-style: italic;
+                font-weight: bold;
+                
+            }
+            
+            
+            img{
+                left: auto;
+                right: auto;
+                width: 90%;
+                margin: 10px;
+                border-radius: 10px;
+                box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.4);
+                text-align: center;
+                max-width: 70%;
+                object-fit: contain;
+                
+            }
+            
+            li, p{
+                margin: 12px;
+                line-height: 3;
+                /* font-family: Arial; */
+                /* font-weight: bold; */
+                font-size:14px;
+                font-family: Arial,Helvetica,sans-serif;
+                
+    
+            }
+    
+            article{
+                /* margin: 20%; */
+                color: white;
+                line-height: 3;
+                margin-top: 10%;
+                margin-left: 15%;
+                margin-right: 15%;
+                font-weight:normal;
+                font: size 15.5em;
+                
+               
+            }
+    
+            u{
+                font-size: larger;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                font-style: italic;
+                font-weight: bold;
+            }
+    
+            h5{
+                font-size:22px; 
+                color:#1B6CFB;
+            }
+            
+           
+            
+                </style>
+                
+        </html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>img[alt="www.000webhost.com"]{display:none;}</style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Method Overriding and Overloading">
+    <meta name="keywords" content="HTML, CSS, JavaScript, chrome, extension, web, web browsing, arrays, Programming, Object-Oriented, methods, overiding, overloading">
+    <meta name="author" content="The Information Technology Experience">
+    <script type="text/javascript" src="../Assets/blog.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="article.css"> -->
+    <link rel="stylesheet" href="../Assets/universal.css">
+    <link rel="icon" type="image/x-icon" href="../Assets/icons8-pen-16 (1).png">
+    <title>Method Overriding & Overloading</title>
+
+
+    
+    <style>
+
+            .card{
+            
+                width: 50%;
+            border-radius: 10px;
+            /* border: 5px solid; */
+          
+          
+            
+        }
+
+            .w3-button:hover{color:#000!important;background-color:gold!important}
+            .w3-padding-large{padding:16px 30px!important}
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+           
+            justify-content: center;
+            align-items: center;
+            /* background: #1B6CFB; */
+            background-color: #000;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+           
+        }
+        
+        .wrapper{
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            max-width: 70%;
+            width: 100%;
+            /* border-radius: 35px; */
+            padding: 25px;
+            /* box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); */
+            /* border: 5px solid;
+            border-color: gold; */
+            box-shadow: 10px 15px 15px;
+            margin-top: 10%;
+        }
+        
+        h1,h2,h3,h4,h6{
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: bold;
+            
+        }
+        
+        
+        img{
+           
+            width: 100%;
+            margin: 10px;
+            /* border-radius: 10px;
+            box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.4); */
+            text-align: center;
+            max-width: auto;
+            
+            height: auto;
+            
+        }
+        
+        li, p{
+            margin: 12px;
+            line-height: 3;
+            /* font-family: Arial; */
+            /* font-weight: bold; */
+            font-size:14px;
+            font-family: Arial,Helvetica,sans-serif;
+           
+
+        }
+
+        article{
+                /* margin: 20%; */
+                color: white;
+                line-height: 3;
+                margin-top: 10%;
+                margin-left: 11%;
+                margin-right: 11%;
+                font-weight:normal;
+                font: size 15.5em;
+                
+               
+            }
+
+        u{
+            font-size: larger;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        h5{
+            font-size:22px;
+            color: #1B6CFB;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: bold;
+            
+        }
+        
+       
+        
+            </style>
+<script>
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else { 
+            x.className = x.className.replace(" w3-show", "");
+        }
+}
+</script>
+        
+           
+        </head>
+        <body class="body">
+          
+          <!-- NAV BAR -->
+         <div class="w3-top">
+          <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="Articles.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ARTICLES</a>
+            <a href="AboutUs.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+            <a href="ContactUs.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+            <a href="NonDisclaimerPolicy.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PRIVACY POLICY</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+             
+            </div>
+            <!-- <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a> -->
+          </div>
+        </div>
+        
+        <!-- NAV BAR -->
+        <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+            <!-- <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a> -->
+            <a href="Articles.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ARTICLES</a>
+            <a href="AboutUs.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+            <a href="ContactUs.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+            <a href="NonDisclaimerPolicy.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PRIVACY POLICY</a>
+          </div>
+    
+    
+          <!-- <div class="wrapper"> -->
+ 
+            <div class="about-section">
+                 
+                 
+                <article>
+                   
+                    <center> <small>Object-Oriented Programming</small> </center>
+                     
+                   
+    
+                    <h1>Method Overriding &	Overloading</h1><br>
+                 
+             <blockquote><i>
+                 December 7, 2022<br>
+                 Read Time: 1 mins 10 secs <br>
+                    Word Count: 275
+             </i>
+               
+            </blockquote><br>
+            <center> <img style="width: 55%;"src="../Assets/overidingheader.png"></center>
+
+           
+                
+    
+                    <p>In Object-Oriented Programming, methods	are	the	operations	associated	with	a	
+                        class. Methods	are	defined	inside	a	class. Methods	give	an	object	of	a	class	its	behaviour. Sending	a	message	to	an	object	means	calling	or	
+                        invoking	a	method	in	the	object. Methods	are	like	functions in other programming	paradigms. <br><br>
+    
+    
+                        <h5>What is Method Overloading</h5>
+                        <p>Overloading occurs in a class when there is more than
+                            one method with the same name but each has a
+                            different signature. The	signature	of	a	method	is	the	name	of	the	method	
+                            and	its	parameter	list	including	the	data	type,	arity	and	
+                            order	of	the	arguments	but	not	the	return	type.If a class has several versions of a method Parent( ), for
+                            example void Parent( ), void Parent(int g), void Parent(float d,
+                            float h), then method Parent( ) is being overloaded.
+                            In Overloading the method name must be the same for overloading to be successful, the signature must be different, the  return type can be overlooked, the data type of parameters, order of parameter and arity and body or contents of the method can be different.
+
+                            <p style="color: #1B6CFB;">Advantages of Method Overloading</p>
+                        <ul>
+                            <li>Method overloading enables methods to be accessed with a common name and a minimal disparity in the number or type of arguments while still performing closely comparable functions.</li>
+                            <li>They may also be applied to constructors, enabling several methods for initializing objects belonging to a class. A constructor is a particular that generates an instance of any class in objected oriented programming.</li>
+                            <!-- <li></li>
+                            <li></li> -->
+                            
+                        </ul>
+
+                        <p style="color: #1B6CFB;">Disadvantages of Method Overloading</p>
+
+                        <ul>
+                            <li>If programmers desire to prevent having to rewrite a lot of code, they must put more effort toward developing the architecture beforehand.</li>
+                        </ul>
+
+    
+                       
+                        
+                        </p>
+    
+                        <br>
+    
+    
+                            <br><h6>Example</h6>
+
+                            <center> <img src="../Assets/overloadingexample.png"></center>
+                           
+                        
+    
+                          
+    
+                        <br><br><br>
+    
+                        
+                 
+    
+    
+                        <br><h5>What is Method OverRiding</h5>
+    
+                        <p>Overriding occurs when more than one method share
+                            the same name, same signature and same return type, in
+                            an inheritance hierarchy. Programmers must construct several separate method definitions in the class, each with the same name but a different list of parameters, in order to generate overloaded methods.
+    
+                        If the parent class has a method called Login( ), and the
+                            child class also has a method called Login( ), then the
+                            child class method will override the parent class
+                            method.
+    
+                        In Overriding the method name, signature, return type, data type of parameters, order of parameter and arity MUST be the same for overriding to be successful. The body or contents of the method can be different.</p>
+
+                       
+                        
+    
+                        <br><h6>Example</h6>
+
+                        <center> <img src="../Assets/overiding.png"></center>
+                       
+                        
+    
+                     
+              </div>
+            </div>
+          
+         
+          
+
+       
+        </div>
+        <div class="w3-center vid-footer"> Copyright 2020 - 2022  DASB Productions. All rights reserved. 
+            <br> <span id='ct5' style="background-color: transparent;"></span>
+            <a style="text-decoration: none;" href="/"> Home</a> <a style="text-decoration: none;" href="Disclaimer.html"> | Disclaimer</a> <a style="text-decoration: none;" href="SiteMap.html"> | SiteMap</a> 
+             </div>
+        
+            
+        </body>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else { 
+                    x.className = x.className.replace(" w3-show", "");
+                }
+    }
+        </script>
+        <script>
+
+            function display_ct5() {
+            var x = new Date()
+            var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
+            
+            var x1=x.getMonth() + 1+ "/" + x.getDate() + "/" + x.getFullYear(); 
+            x1 = x1 + " - " +  x.getHours( )+ ":" +  x.getMinutes() + ":" +  x.getSeconds()  + ampm;
+            document.getElementById('ct5').innerHTML = x1;
+            display_c5();
+             }
+             function display_c5(){
+            var refresh=1000; // Refresh rate in milli seconds
+            mytime=setTimeout('display_ct5()',refresh)
+            }
+            display_c5()
+            </script>
+        </html>
