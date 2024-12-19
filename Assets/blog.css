@@ -1,0 +1,176 @@
+.centered{
+    text-align: center;
+   font-size: 40px;
+}
+
+h1{
+    color: black;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+body{
+    background-color: #49c5b6;
+    font-family: Arial;
+    padding: 20px;
+}
+
+a{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+hr{
+    width: 50%;
+}
+
+.sidebar {
+    height: 100%;
+    width: 150px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 40px;
+    background-color: black;
+    }
+    
+    .sidebar div {
+    padding: 8px;
+    font-size: 24px;
+    display: block;
+    }
+    
+    .body-text {
+    margin-left: 150px;
+    font-size: 18px;
+    
+    }
+
+
+    p{
+        color: black;
+    }
+
+    .white{
+        color: white; 
+    }
+
+    button{
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;
+        font-size: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+    }
+
+    .all-browsers {
+       
+        margin: 0;
+        padding: 5px;
+        background-color: white;
+        width: 20%;
+        text-align: center;
+        border-radius: 10px; 
+        border: 2px solid black;
+        
+        
+      }
+      
+      .all-browsers > h1, .browser {
+        margin: 10px;
+        padding: 5px;
+      }
+      
+      .browser {
+        background: white;
+      }
+      
+      .browser > h2, p {
+        margin: 4px;
+        font-size: 90%;
+      }
+
+      .inner {
+       
+        margin-left:20%;
+       
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      
+      
+      
+      /* Header/Blog Title */
+      .header {
+        padding: 30px;
+        font-size: 40px;
+        text-align: center;
+        background: #2779a7;
+      }
+      
+      /* Create two unequal columns that floats next to each other */
+      /* Left column */
+      .leftcolumn {
+        float: left;
+        width: 35%;
+       
+      }
+
+      
+      .blogpage{
+        float: left;
+        width: 50%;
+      }
+      
+      /* Right column */
+      .rightcolumn {
+        float: left;
+        width: 25%;
+        padding-left: 20px;
+      }
+      
+      /* Fake image */
+      .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+      }
+      
+      /* Add a card effect for articles */
+      .card {
+        background-color: white;
+        padding: 20px;
+        margin-top: 80px;
+        border-radius: 20px; 
+        border: 5px solid black;
+        width: 30%;
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      /* Footer */
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: #ddd;
+        margin-top: 20px;
+      }
+      
+      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 800px) {
+        .leftcolumn, .rightcolumn {
+          width: 100%;
+          padding: 0;
+        }
+      }
+
+      

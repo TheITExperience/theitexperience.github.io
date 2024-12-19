@@ -1,0 +1,20 @@
+.vid-footer {
+    color: rgba(104, 108, 131, 0.65);
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 40px;
+    
+    
+  }
+
+  @media only screen and (max-width:700px){
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
