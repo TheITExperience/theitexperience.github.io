@@ -74,213 +74,290 @@
                     </div>
   
                
-                <article>
-                  
-                   
-                    <blockquote><i>
-                        December 3, 2022<br>
-                        Read Time: 4 mins 49 secs <br>
-                           Word Count: 1145
-                    </i>
-                      
-                   </blockquote><br>
+                    <article>
 
-                    <img src="../Assets/randomaccessheader.png" alt="Files Header Image"><br>
-            
-                    <p>A record is a collection of fields for a single entity. For example, a student's record may contain the student's id number, first name, last name, date of birth, and GPA.  Each student's record would
-                        all contain the same fields but the information
-                        may be different for each.
-            
-                        A field is a collection of bytes that has meaning,
-                        e.g. a student's age, or grade or last name. All of
-                        these are individual fields.
-            
-                        A byte is the smallest unit of information in the file,
-                        the entire file is seen as just a stream of bytes.
-                        
-                   <br>
-            
-            
-                    Two types of files in programming are Sequential Access Files & Random Access Files</p><br>
-            
-                    <u>Sequential access files</u>
-                    <p>Sequential access files are essentially plain
-                        text files in which data is read from the
-                        beginning of the file until the desired
-                        information is found. Writing takes places at
-                        the beginning or at the end of the file (append
-                        mode). The information in the file is analyzed in sequence. This method of accessing the file is by far the most used among programmers due to its simple nature. The lengths of the records might all be different or could all be the same. Each record concludes with a unique character or characters. The file can start empty and grow.</p><br>
-            
-            
-                    <u>Random access files</u>
-                    <p>Random access files are usually binary files
-                        which allow data to be read or written from/to
-                        anywhere in the file. The file size is usually
-                        per-calculated fixed to the maximum amount
-                        of records the file will ever hold. Without looking at or scanning any other information that the file is presently storing, a specified segment of information within the record can be reached by the file pointer by navigating directly to it. Like a huge array of bytes kept in the file system, a random access file acts similarly. The term file pointer refers to a specific type of cursor or index into the inferred array; input operations read bytes beginning at the file pointer and advance the file pointer past the bytes read. Output procedures are also available if the random access file is generated in read/write mode; these actions write bytes beginning at the file pointer and advance the file pointer past the bytes written. The inferred array is expanded by output operations that write past its present end. The getFilePointer function may be used to read the file pointer, and the seek method can be used to set it.</p><br>
-            
-            
-                    <h5>Working with random access files</h5>
-            
-                    <ul >
-                        <li>Create and initialize the file with blank records.
-                            The number of blank records should be the
-                            maximum number of records the file will ever
-                            hold. Remember the file wont grow or shrink</li>
-            
-                        <li>To write or update a record in the file, calculate
-                            where in the file the record is to be written the
-                            write the record to the file</li>
-            
-                        <li>To read a record from the file, calculate where in
-                            the file the record is located, then read that
-                            record from the file</li>
-            
-            
-                        <li>The fopen() function is also used to open a
-                            random access file. The same modes used with
-                            sequential access files apply, but a 'b' is added
-                            to specify binary mode</li>
-            
-                        <li>The fseek() function is used to position the file
-                            pointer to the required record position before a
-                            write or read takes place</li>
-            
-                        <li>The fwrite() function writes records to the file</li>
-            
-                        <li>The fread() function reads records from the file</li>
-                        <li>The fclose() function closes the file</li>
-                        
-                    </ul><br>
-            
-                    <h5>Positioning the file pointer to the required record</h5>
-            
-                    <ul>
-                        <li>Start with the logical record number (1 to max
-                            records)</li>
-                        <li>Minus one from the logical record number</li>
-                        <li>Multiply by the size of a single record (remember
-                            all the records in a file have the same size)</li>
-                        <li>Use the result in the fseek() function. The result
-                            represents the actual location in the file (the byte
-                            position) where the actual record is located</li>
-                        <li>Use fseek(fp, sizeof(e) * (e.IdNo - 1), SEEK_SET); </li>
-                        <li>Where fp is the file pointer, e is a structure variable
-                            containing the data to be stored, IdNo is the logical
-                            record number, and SEEK_SET means to starting
-                            seeking from the beginning of the file</li>
-                        
-                    </ul><br>
-                    
-            
-                    <h5>Opening a random access file</h5>
-            
-                    <ul>
-                        <li>Include the standard input/output library</li>
-                        <li>Declare a pointer of data type FILE
-                        </li>
-                        <li>Call the fopen() function with the name of the
-                            file and the mode it is to be opened in</li>
-                        <li>Format:
-                            #include <stdio.h><br>
-                            FILE *filepointer;<br>
-                            filepointer = fopen(filename, mode);
+
+                        <blockquote>
+                            <i>
+                                December 3, 2022<br>
+                                Read Time: 4 mins 49 secs <br>
+                                Word Count: 1145
+                            </i>
+
+                        </blockquote><br>
+
+                        <img src="../Assets/randomaccessheader.png" alt="Files Header Image"><br>
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736"
+                                crossorigin="anonymous"></script>
+                        <!-- Horizontal (28/1/25) -->
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-6760354428989736"
+                             data-ad-slot="8424936846"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+
+                        <p>
+                            A record is a collection of fields for a single entity. For example, a student's record may contain the student's id number, first name, last name, date of birth, and GPA.  Each student's record would
+                            all contain the same fields but the information
+                            may be different for each.
+
+                            A field is a collection of bytes that has meaning,
+                            e.g. a student's age, or grade or last name. All of
+                            these are individual fields.
+
+                            A byte is the smallest unit of information in the file,
+                            the entire file is seen as just a stream of bytes.
+
+                            <br>
+
+
+                            Two types of files in programming are Sequential Access Files & Random Access Files
+                        </p><br>
+
+                        <u>Sequential access files</u>
+                        <p>
+                            Sequential access files are essentially plain
+                            text files in which data is read from the
+                            beginning of the file until the desired
+                            information is found. Writing takes places at
+                            the beginning or at the end of the file (append
+                            mode). The information in the file is analyzed in sequence. This method of accessing the file is by far the most used among programmers due to its simple nature. The lengths of the records might all be different or could all be the same. Each record concludes with a unique character or characters. The file can start empty and grow.
+                        </p><br>
+
+
+                        <u>Random access files</u>
+                        <p>
+                            Random access files are usually binary files
+                            which allow data to be read or written from/to
+                            anywhere in the file. The file size is usually
+                            per-calculated fixed to the maximum amount
+                            of records the file will ever hold. Without looking at or scanning any other information that the file is presently storing, a specified segment of information within the record can be reached by the file pointer by navigating directly to it. Like a huge array of bytes kept in the file system, a random access file acts similarly. The term file pointer refers to a specific type of cursor or index into the inferred array; input operations read bytes beginning at the file pointer and advance the file pointer past the bytes read. Output procedures are also available if the random access file is generated in read/write mode; these actions write bytes beginning at the file pointer and advance the file pointer past the bytes written. The inferred array is expanded by output operations that write past its present end. The getFilePointer function may be used to read the file pointer, and the seek method can be used to set it.
+                        </p><br>
+
+
+                        <h5>Working with random access files</h5>
+
+                        <ul>
+                            <li>
+                                Create and initialize the file with blank records.
+                                The number of blank records should be the
+                                maximum number of records the file will ever
+                                hold. Remember the file wont grow or shrink
                             </li>
-                        <li>NOTE: filename and mode are strings</li>
-                        <li>The fopen() function returns a FILE pointer</li>
-                        <li>If the requested file was opened successfully,
-                            the FILE pointer returned will contain a valid
-                            memory address</li>
-                        <li>If the open operation failed, the FILE pointer
-                            returned will contain NULL (0)</li>
-                        <li>It is good programming practice to test the
-                            FILE pointer returned to determine if the file
-                            open operation was successful</li>
-                       
-                    </ul><br>
-            
-                    <h5>Modes used to open files in binary mode</h5>
-                    <ul>
-                        <li>wb: Open a file for writing in binary mode. If the file already exists, erase its contents
-                            and start a new file. If the file doesn't exist, create and open a new file for writing</li>
-                        <li>ab: Open a file for appending in binary mode. If the file already exists. If the file
-                            doesn't exist, create and open a new file for writing</li>
-                        <li> rb: Open a file for reading in binary mode. The file must already exist.</li>
-            
-                        <li>w+b: Open a file for both reading and writing in binary mode. If the file already exists,
-                            overwrite it. </li>
-            
+
+                            <li>
+                                To write or update a record in the file, calculate
+                                where in the file the record is to be written the
+                                write the record to the file
+                            </li>
+
+                            <li>
+                                To read a record from the file, calculate where in
+                                the file the record is located, then read that
+                                record from the file
+                            </li>
+
+
+                            <li>
+                                The fopen() function is also used to open a
+                                random access file. The same modes used with
+                                sequential access files apply, but a 'b' is added
+                                to specify binary mode
+                            </li>
+
+                            <li>
+                                The fseek() function is used to position the file
+                                pointer to the required record position before a
+                                write or read takes place
+                            </li>
+
+                            <li>The fwrite() function writes records to the file</li>
+
+                            <li>The fread() function reads records from the file</li>
+                            <li>The fclose() function closes the file</li>
+
+                        </ul><br>
+
+                        <h5>Positioning the file pointer to the required record</h5>
+
+                        <ul>
+                            <li>
+                                Start with the logical record number (1 to max
+                                records)
+                            </li>
+                            <li>Minus one from the logical record number</li>
+                            <li>
+                                Multiply by the size of a single record (remember
+                                all the records in a file have the same size)
+                            </li>
+                            <li>
+                                Use the result in the fseek() function. The result
+                                represents the actual location in the file (the byte
+                                position) where the actual record is located
+                            </li>
+                            <li>Use fseek(fp, sizeof(e) * (e.IdNo - 1), SEEK_SET); </li>
+                            <li>
+                                Where fp is the file pointer, e is a structure variable
+                                containing the data to be stored, IdNo is the logical
+                                record number, and SEEK_SET means to starting
+                                seeking from the beginning of the file
+                            </li>
+
+                        </ul><br>
+
+
+                        <h5>Opening a random access file</h5>
+
+                        <ul>
+                            <li>Include the standard input/output library</li>
+                            <li>
+                                Declare a pointer of data type FILE
+                            </li>
+                            <li>
+                                Call the fopen() function with the name of the
+                                file and the mode it is to be opened in
+                            </li>
+                            <li>
+                                Format:
+                                #include <stdio.h>
+                                    <br>
+                                    FILE *filepointer;<br>
+                                    filepointer = fopen(filename, mode);
+                            </li>
+                            <li>NOTE: filename and mode are strings</li>
+                            <li>The fopen() function returns a FILE pointer</li>
+                            <li>
+                                If the requested file was opened successfully,
+                                the FILE pointer returned will contain a valid
+                                memory address
+                            </li>
+                            <li>
+                                If the open operation failed, the FILE pointer
+                                returned will contain NULL (0)
+                            </li>
+                            <li>
+                                It is good programming practice to test the
+                                FILE pointer returned to determine if the file
+                                open operation was successful
+                            </li>
+
+                        </ul><br>
+
+                        <h5>Modes used to open files in binary mode</h5>
+                        <ul>
+                            <li>
+                                wb: Open a file for writing in binary mode. If the file already exists, erase its contents
+                                and start a new file. If the file doesn't exist, create and open a new file for writing
+                            </li>
+                            <li>
+                                ab: Open a file for appending in binary mode. If the file already exists. If the file
+                                doesn't exist, create and open a new file for writing
+                            </li>
+                            <li> rb: Open a file for reading in binary mode. The file must already exist.</li>
+
+                            <li>
+                                w+b: Open a file for both reading and writing in binary mode. If the file already exists,
+                                overwrite it.
+                            </li>
+
                             <li>a+b: Open a file for both reading and writing in binary mode. </li>
                             <li>r+b: Open a file for both reading and writing in binary mode.</li>
-                            
-                    </ul><br>
-            
-                    <h5>Storing data in a
-                        random access file</h5>
-                       
+
+                        </ul><br>
+
+                        <h5>
+                            Storing data in a
+                            random access file
+                        </h5>
+
                         <u>To store data in the file:</u>
-            
+
                         <ul>
                             <li>The file must already be opened for writing</li>
-                            <li>You must have a FILE pointer pointing to the file
-                                and this pointer must not contain NULL</li>
-                            <li>Call the fwrite() function with the location of the
+                            <li>
+                                You must have a FILE pointer pointing to the file
+                                and this pointer must not contain NULL
+                            </li>
+                            <li>
+                                Call the fwrite() function with the location of the
                                 data to be stored, the number of bytes from that
                                 location that will be stored, the amount of records
-                                (usually 1), and the FILE pointer</li>
-                                <li>Format:
-                                    fwrite(location, number of bytes, amount, filepointer);
-                                    eg. fwrite(&e, sizeof(e), 1, fp); </li>
-                            
-                        </ul><br>
-            
-            
-                        <h5>Retrieving data from
-                            a random access file</h5>
-                           
-                            <u>To retrieve data from the file:</u>
-                
-                            <ul>
-                                <li>The file must already be opened for reading</li>
-                                <li>You must have a FILE pointer pointing to the file
-                                    and this pointer must not contain NULL</li>
-                                <li>Call the fread() function with the location where
-                                    the data to be retrieved will be placed, the
-                                    number of bytes to be retrieved, the amount of
-                                    records (usually 1), and the FILE pointer.
-                                    </li>
-                                <li>Format:
-                                    fread(location, number of bytes, amount, filepointer);
-                                    eg. fread(&e, sizeof(e), 1, fp); </li>
-                               
-                            </ul><br>
-            
-                            <h5>Closing a random access file</h5>
-            
-                            <ul>
-                                <li>You should close a file when you are finished working
-                                    with it – this frees/releases resources used</li><br>
-                                
-                               
-                            </ul>
-                               
-                                <u>To close a file:</u>
-                    
-                                <ul>
-                                    <li>The file must have already be opened</li>
-                                    <li>You must have a FILE pointer pointing to the file and
-                                        this pointer must not contain NULL</li>
-                                    <li>Call the fclose() function with the FILE pointer
-                                        </li>
-                                    <li> Format:
-                                        fclose(filepointer); </li>
-                                   
-                                </ul>
-            
-            
-            
+                                (usually 1), and the FILE pointer
+                            </li>
+                            <li>
+                                Format:
+                                fwrite(location, number of bytes, amount, filepointer);
+                                eg. fwrite(&e, sizeof(e), 1, fp);
+                            </li>
 
-                </article> <!-- ending tag -->
+                        </ul><br>
+
+
+                        <h5>
+                            Retrieving data from
+                            a random access file
+                        </h5>
+
+                        <u>To retrieve data from the file:</u>
+
+                        <ul>
+                            <li>The file must already be opened for reading</li>
+                            <li>
+                                You must have a FILE pointer pointing to the file
+                                and this pointer must not contain NULL
+                            </li>
+                            <li>
+                                Call the fread() function with the location where
+                                the data to be retrieved will be placed, the
+                                number of bytes to be retrieved, the amount of
+                                records (usually 1), and the FILE pointer.
+                            </li>
+                            <li>
+                                Format:
+                                fread(location, number of bytes, amount, filepointer);
+                                eg. fread(&e, sizeof(e), 1, fp);
+                            </li>
+
+                        </ul><br>
+
+                        <h5>Closing a random access file</h5>
+
+                        <ul>
+                            <li>
+                                You should close a file when you are finished working
+                                with it – this frees/releases resources used
+                            </li>
+                            <br>
+
+
+                        </ul>
+
+                        <u>To close a file:</u>
+
+                        <ul>
+                            <li>The file must have already be opened</li>
+                            <li>
+                                You must have a FILE pointer pointing to the file and
+                                this pointer must not contain NULL
+                            </li>
+                            <li>
+                                Call the fclose() function with the FILE pointer
+                            </li>
+                            <li>
+                                Format:
+                                fclose(filepointer);
+                            </li>
+
+                        </ul>
+
+
+
+
+                    </article> <!-- ending tag -->
             
                 
               </div>
